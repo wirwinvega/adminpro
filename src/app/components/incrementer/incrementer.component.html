@@ -1,0 +1,14 @@
+<h3>{{ title }}</h3>
+<div class="input-group">
+    <div class="input-group-prepend" id="button-addon4">
+        <button class="btn btn-outline-primary" type="button" (click)="changeProgress(-5)">
+            <i class="mdi mdi-minus"></i>
+        </button>
+    </div>
+    <input #txtProgress type="number" min="0" max="100" (ngModelChange)="onChanged($event)" class="form-control" placeholder="Porcentaje del progress" name="progress" [(ngModel)]="progress">
+    <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-primary" type="button" (click)="changeProgress(+5)">
+                <i class="mdi mdi-plus"></i>
+        </button>
+    </div>
+</div>
